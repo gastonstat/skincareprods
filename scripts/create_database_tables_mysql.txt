@@ -1,0 +1,29 @@
+
+mysql -u root
+
+CREATE DATABASE prueba;
+
+SHOW DATABASES;
+
+USE prueba;
+
+
+CREATE TABLE IF NOT EXISTS chemicals (
+	chem_id int(5) NOT NULL AUTO_INCREMENT,
+	chemical varchar(100) DEFAULT NULL,
+	toxicity varchar(50) DEFAULT NULL,
+	mechanism varchar(10) DEFAULT NULL,
+	PRIMARY KEY(chem_id)
+);
+
+SHOW TABLES;
+
+SHOW COLUMNS IN chemicals;
+
+
+INSERT INTO chemicals (chemical, toxicity, mechanism)
+VALUES
+("triclosan", "high", "toothpaste");
+
+
+SELECT * FROM chemicals;
